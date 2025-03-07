@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АвтоДогляд - Щітки для детейлінгу</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 6cm;
+            margin: auto;
+        }
+        .image-container img {
+            width: 10cm;
+            height: 6cm;
+            border-radius: 10px;
+            display: none;
+        }
+        .image-container img.active {
+            display: block;
+        }
+        .price {
+            font-size: 24px;
+            color: #d9534f;
+            font-weight: bold;
+        }
+        .buy-button {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+        .buy-button:hover {
+            background-color: #218838;
+            transform: scale(1.05);
+        }
+        .description, .features {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .features ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .features ul li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Набір щіток для дітейлінгу авто</h1>
+        <div class="image-container">
+            <img src="images/image.webp" alt="Щітки в роботі" class="active">
+            <img src="images/image (1).webp" alt="Комплектація щіток">
+            <img src="images/image (2).jpg" alt="Розміри щіток">
+        </div>
+        <p>Ідеально підійдуть для використання всередині і зовні автомобіля. Володіють м'якою щетиною. Не линяють і не лізуть. Кожна щітка має отвір на кінці ручки для дбайливого зберігання в підвішеному стані.</p>
+        <p>Синтетичне волокно, що володіє підвищеною міцністю і гнучкістю, що в свою чергу позитивно позначається на поверхні.</p>
+        <p>Підходить для мокрого та сухого використання. Найчастіше дані щітки призначені для видалення пилу з коліс, вентиляційних отворів, щілин між сидінням та інших важкодоступних місць.</p>
+
+        <div class="features">
+            <h3>Характеристики:</h3>
+            <ul>
+                <li><strong>Матеріал кисті:</strong> нейлонове волокно</li>
+                <li><strong>Матеріал ручки:</strong> пластик</li>
+                <li><strong>Довжина пензликів:</strong> 20.5 см, 22 см, 22.5 см, 23 см, 24 см</li>
+                <li><strong>Колір:</strong> чорний</li>
+                <li><strong>Набір включає в себе:</strong> кисті 5 шт</li>
+            </ul>
+        </div>
+
+        <p class="price">Ціна: 499 грн</p>
+        <a href="#" class="buy-button">Купити зараз</a>
+    </div>
+    <script>
+        let images = document.querySelectorAll('.image-container img');
+        let index = 0;
+        
+        setInterval(() => {
+            images[index].classList.remove('active');
+            index = (index + 1) % images.length;
+            images[index].classList.add('active');
+        }, 3000);
+    </script>
+</body>
+</html>
