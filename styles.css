@@ -20,7 +20,7 @@ body {
 
 /* Карточка товара */
 .product {
-  width: 520px; /* Увеличено на 10% */
+  width: 300px; /* Увеличено на 10% */
   background: rgba(255, 255, 255, 0.9);
   padding: 20px;
   border-radius: 10px;
